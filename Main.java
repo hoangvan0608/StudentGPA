@@ -75,6 +75,18 @@ public class Main {
                         break;
                     }
                 case 8:
+                    students = man.getSts();
+                    subjects = man.getSbs();
+                    if(subjects != null && students != null)
+                    {
+                        man.showDiemTongKet();
+                        break;
+                    }
+                    else {
+                        break;
+                    }
+
+                case 9:
                     man.writeStudentToFile();
                     man.writeMarkSheetToFile();
                     man.writeSubjectToFile();
@@ -92,7 +104,8 @@ public class Main {
         System.out.println("5. Nhập điểm cho mỗi sinh viên");
         System.out.println("6. Sắp xếp bảng điểm theo họ tên Sinh viên");
         System.out.println("7. Sắp xếp bảng điểm theo tên môn học");
-        System.out.println("8. Ghi toàn bộ dữ liệu vào File");
+        System.out.println("8. Điểm tổng kết cảu sinh viên");
+        System.out.println("9. Ghi toàn bộ dữ liệu vào File");
         System.out.println("0. Thoát");
     }
 }

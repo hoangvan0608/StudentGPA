@@ -150,8 +150,10 @@ public class Management implements Serializable {
                     localSub[j] = checksub;
                     System.out.println("===========");
                     mark[j] = diem;
+
                 }
                 msk[i] = new MarkSheet(localStudent,localSub,mark);
+                msk[i].diemTongKet();
             }
             showMarks();
         }
@@ -184,6 +186,14 @@ public class Management implements Serializable {
             System.out.println(msk[i].toString());
         }
     }
+    public void showDiemTongKet()
+    {
+        for (int i = 0; i < msk.length; i++) {
+            String name =msk[i].getStudent().getFullName();
+            float diem = msk[i].getDiemTongKet();
+            System.out.println(String.format("Sinh viên %s có điểm tổng kết : %f",name,diem));
+        }
+    }
     public void sortByNameStudent()
     {
         for (int i = 0; i < msk.length -1; i++) {
@@ -214,6 +224,7 @@ public class Management implements Serializable {
         }
         showMarks();
     }
+
 
 
     /*

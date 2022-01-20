@@ -41,8 +41,12 @@ public class GenericReadFromFile<T>{
 
 
     public static void main(String[] args) {
-        GenericReadFromFile<Object> sub = new GenericReadFromFile<>();
-        sub.docFile();
+        while (true)
+        {
+            GenericReadFromFile<Object> sub = new GenericReadFromFile<>();
+            sub.docFile();
+        }
+
         //Subject : C:\Users\TAV\IdeaProjects\BackEnd__T3H\src\ITSOL\StudentGPA\Subject.txt
         //Student : C:\Users\TAV\IdeaProjects\BackEnd__T3H\src\ITSOL\StudentGPA\Student.txt
         //MarkSheet : C:\Users\TAV\IdeaProjects\BackEnd__T3H\src\ITSOL\StudentGPA\MarkSheet.txt
